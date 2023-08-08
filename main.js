@@ -11,9 +11,13 @@ function keyPlay(event) {
   event.target.style.backgroundColor = 'blue';
 }
 
-// Write a named function with event handler properties
 function keyReturn(event) {
   event.target.style.backgroundColor = '';
+}
+// Write a named function with event handler properties
+function assignEvents(note) {
+  note.onmousedown = keyPlay;
+  note.onmouseup = keyReturn;
 }
 
 // Write a loop that runs the array elements through the function
